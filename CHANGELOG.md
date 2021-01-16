@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 ### :star: Added
-- example `generate-angular-project` - 
+- exercise `generate-angular-project` - generate Angular project
 
 ### :hammer: Changed
 
