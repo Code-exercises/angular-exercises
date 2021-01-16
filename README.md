@@ -35,6 +35,7 @@ Generate Angular project:
 - without routing
 - without component tests
 - use SCSS for styling
+- use `abc` prefix for components
 
 **Project**: `generate-angular-project`
 
@@ -42,7 +43,7 @@ Generate Angular project:
 <summary>Solution</summary>
 
 ```bash
-npx ng new project --routing false --skip-tests true --style scss
+npx ng new project --routing false --skip-tests true --style scss --prefix abc
 ```
 </details>
 
