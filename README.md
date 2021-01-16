@@ -16,11 +16,15 @@ Exercise format:
 -->
 # Angular exercises
 
-
 <details>
-<summary>Generate Angular project without routing and tests, for styling use scss</summary>
+<summary>Generate Angular project</summary>
 
-**Task:** generate Angular project without routing and tests, for styling use scss
+**Task**
+
+Generate Angular project:
+- without routing
+- without component tests
+- use SCSS for styling
 
 **Project**: `generate-angular-project`
 
