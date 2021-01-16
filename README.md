@@ -16,6 +16,8 @@ Exercise format:
 -->
 # Angular exercises
 
+![angular-logo](./angular-logo.png)
+
 To create new exercise from exercise template execute `create-exercise.sh` script with exercise name as parameter:
 
 ```bash
