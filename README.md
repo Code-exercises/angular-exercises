@@ -35,6 +35,8 @@ Generate Angular project:
 npx ng new project --routing false --skip-tests true --style scss
 ```
 </details>
+
+---
 </details>
 
 <!--- -->
@@ -53,6 +55,8 @@ npx ng new project --routing false --skip-tests true --style scss
 ng g c user --skip-tests true
 ```
 </details>
+
+---
 </details>
 
 <!--- -->
@@ -118,4 +122,7 @@ export class AppComponent {
 
 </details>
 
+---
 </details>
+
+<!--- -->
