@@ -16,6 +16,14 @@ Exercise format:
 -->
 # Angular exercises
 
+To create new exercise from exercise template execute `create-exercise.sh` script with exercise name as parameter:
+
+```bash
+./create-exercise.sh example-exarcise
+```
+
+## Exercises list
+
 <details>
 <summary>Generate Angular project</summary>
 
