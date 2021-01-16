@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  text: string = 'Default text'
+
+  setDefaultText() {
+    this.text = 'Default text'
+  }
 }

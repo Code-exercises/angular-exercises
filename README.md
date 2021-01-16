@@ -161,12 +161,12 @@ export class AppComponent {
 </details>
 
 <details>
-<summary>Create method in component that will change text in property</summary>
+<summary>Create method in component that will sets default text to property</summary>
 
 ```diff
 export class AppComponent {
 ...
-+ changeText() {
++ setDefaultText() {
 +   this.text = 'Default text'
 + }
 }
@@ -177,15 +177,15 @@ export class AppComponent {
 <summary>Create button in template</summary>
 
 ```
-<button>Change text</button>
+<button>Set default text</button>
 ```
 </details>
 
 <details>
-<summary>Bind button's <code>click</code> event to method that changes property value</summary>
+<summary>Bind button's <code>click</code> event to method that sets default text to property</summary>
 
 ```
-<button (click)="changeText()">Change text</button>
+<button (click)="setDefaultText()">Set default text</button>
 ```
 </details>
 
@@ -211,6 +211,14 @@ export class AppComponent {
   ],
   ...
 })
+```
+</details>
+
+<details>
+<summary>use <code>ngModel</code> directive with input for two-way binding</summary>
+
+```
+<input [(ngModel)]="text" type="text"></input>
 ```
 </details>
 
