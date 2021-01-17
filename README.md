@@ -261,7 +261,7 @@ npm i bootstrap@4.5.3 popper.js@1.16.1 jquery@3.5.1
 <summary>Add Bootstrap styles</summary>
 
 Add styles to `angular.json` using path `projects.app.architect.build.options.styles`
-```bash
+```diff
 "styles": [
   "src/styles.scss",
 + "./node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -273,7 +273,7 @@ Add styles to `angular.json` using path `projects.app.architect.build.options.st
 <summary>Add JQuery and Bootstrap scripts</summary>
 
 Add styles to `angular.json` using path `projects.app.architect.build.options.scripts`
-```bash
+```diff
 "scripts": [
 + "./node_modules/jquery/dist/jquery.min.js",
 + "./node_modules/bootstrap/dist/js/bootstrap.min.js"
