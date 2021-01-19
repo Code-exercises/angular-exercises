@@ -44,7 +44,7 @@ Generate Angular project:
 <summary>Solution</summary>
 
 ```bash
-npx ng new project --routing false --skip-tests true --style scss --prefix abc
+npx ng new app --routing false --skip-tests true --style scss --prefix abc
 ```
 </details>
 
