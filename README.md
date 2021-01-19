@@ -25,6 +25,11 @@ To create new exercise from exercise template execute `create-exercise.sh` scrip
 ./create-exercise.sh example-exarcise
 ```
 
+Exercise template app was created using command:
+```bash
+npx ng new app --routing false --skip-tests true --style scss
+```
+
 ## Exercises list
 
 <details>
