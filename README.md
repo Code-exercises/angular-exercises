@@ -290,3 +290,42 @@ Add styles to `angular.json` using path `projects.app.architect.build.options.sc
 
 ---
 </details>
+
+<details>
+<summary>Add routing</summary>
+
+**Task:**
+- add routing to project
+
+**Project**:
+- `routing`
+- note: `0-start` project was generated without routing:
+  ```bash
+  npx ng new app --routing false --skip-tests true --style scss
+  ```
+
+<details>
+<summary>Solution</summary>
+
+- add routes configuration to the project
+  - generate `AppRouting` module: `ng g m app-routing --flat true`
+  - configure routes in `AppRouting` module:
+    ```diff
+    import { NgModule } from '@angular/core';
+    - import { CommonModule } from '@angular/common';
+    + import { Routes, RouterModule } from '@angular/router';
+    
+    + const routes: Routes = [];
+    @NgModule({
+    - declarations: [],
+    - imports: [CommonModule]
+    + imports: [RouterModule.forRoot(routes)],
+    + exports: [RouterModule]
+    })
+    export class AppRoutingModule { }
+    ```
+  - import `AppRouting` module to `App` module
+</details>
+
+---
+</details>
