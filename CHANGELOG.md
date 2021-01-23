@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - exercise `bind-events` - bind events
 - exercise `two-way-binding` - bind property to input using `FormsModule`
 - exercise `add-bootstrap-4` - add Bootstrap 4
+- exercise `routing` - add routing to the project
 
 ### :hammer: Changed
 
