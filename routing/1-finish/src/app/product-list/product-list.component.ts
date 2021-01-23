@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductService} from "../product.service";
+import {Product, ProductService} from "../product.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-product-list',
@@ -7,10 +8,24 @@ import {ProductService} from "../product.service";
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
+  private sorting: string;
 
-  constructor(public productService: ProductService) { }
+  constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.sorting = params.sorting
+    })
+  }
+
+  getProducts(): Product[] {
+    return this.productService.getAllProducts().sort((first, second) => {
+      if (this.sorting === 'price') {
+        return first.price - second.price;
+      } else {
+        return first.title.localeCompare(second.title);
+      }
+    })
   }
 
 }

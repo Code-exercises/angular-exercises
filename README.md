@@ -297,15 +297,14 @@ Add styles to `angular.json` using path `projects.app.architect.build.options.sc
 **Task:**
 - add routing to project
 - add a header with links `Home`, `About`
-- when user clicks on `Home` link it should be redirected to `Home` component
-- when user clicks on `About` link it should be redirected to `About` component
+- when user clicks on `Home` link it should be redirected to `Home` page with `/` url
+- when user clicks on `About` link it should be redirected to `About` page with `/about` url
 - show list of products on the `Home` page
-- when user clicks on the product, `ProductDetails` component with product information should be shown
-- create `Product` service to fetch products from it
-- add `About` component with `/about` routing
-- add `Home` component with `/` routing
-  - add child `ProductList` component with `/` routing
-  - add child `ProductDetail` component with `/products/:id` routing
+  - user should have sorting options: by price, by name
+  - when user clicks on the product, product details should be shown on page with `/products/:id` url
+  - on the page with product details should be `Products list` button;
+    - when user clicks on `Products list` button it should be redirected to products list
+- when users inputs wrong url `Not found` page should be shown
 
 **Project**:
 - `routing`
@@ -480,9 +479,46 @@ constructor(public productService: ProductService) { }
 ```
 </details>
 
+<details>
+<summary>Add products sorting</summary>
+
+- add link with query parameter:
+  ```html
+  <a routerLink="/" [queryParams]="{sorting: 'price'}">by price</a>
+  ```
+- subscribe to `ActivatedRoute.quaryParams`.
 </details>
 
+</details>
 
+<details>
+<summary>Show product details</summary>
+
+Use `ActivatedRoute` and `ProductService`
+
+```typescript
+constructor(
+  public activatedRoute: ActivatedRoute,
+  public productService: ProductService,
+) { }
+ngOnInit(): void {
+  this.activatedRoute.params.subscribe(params => {
+    this.product = this.productService.getProductById(Number.parseInt(params['id']))
+  });
+}
+```
+
+For `Go to Home` button:
+- inject `Router`
+- use `router.navigate([])` method
+</details>
+
+</details>
+
+<details>
+<summary>Add Not Found page</summary>
+
+- add route with `**` path
 </details>
 
 ---

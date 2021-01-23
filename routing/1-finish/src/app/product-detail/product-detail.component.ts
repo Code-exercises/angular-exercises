@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Product, ProductService} from "../product.service";
 
 @Component({
@@ -8,19 +8,22 @@ import {Product, ProductService} from "../product.service";
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
-  productId: number
   product: Product
 
   constructor(
     public activatedRoute: ActivatedRoute,
     public productService: ProductService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      this.productId = params['id'];
-      this.product = this.productService.getProductById(this.productId);
+      this.product = this.productService.getProductById(Number.parseInt(params['id']))
     });
+  }
+
+  goToHomePage() {
+    this.router.navigate(['/']);
   }
 
 }

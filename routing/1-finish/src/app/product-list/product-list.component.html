@@ -1,5 +1,9 @@
+<div>
+  <strong>Sorting: </strong> <a routerLink="/" [queryParams]="{sorting: 'price'}">by price</a> | <a routerLink="/" [queryParams]="{sorting: 'title'}">by title</a>
+</div>
+
 <ul>
-  <li *ngFor="let product of productService.getAllProducts()">
-    <a [routerLink]="['/products', product.id]">{{product.title}}</a>
+  <li *ngFor="let product of getProducts()">
+    <a [routerLink]="['/products', product.id]">{{product.title}}</a> - {{product.price}}
   </li>
 </ul>
