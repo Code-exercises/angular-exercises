@@ -513,12 +513,12 @@ For `Go to Home` button:
 - use `router.navigate([])` method
 </details>
 
-</details>
-
 <details>
 <summary>Add Not Found page</summary>
 
 - add route with `**` path
+</details>
+
 </details>
 
 ---
