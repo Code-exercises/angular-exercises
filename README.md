@@ -33,13 +33,8 @@ npx ng new app --routing false --skip-tests true --style scss
 ## Exercises list
 
 - [Generate Angular project](/generate-angular-project)
-
 - [Generate component](/generate-component)
-
 - [Bind events](/bind-events)
-
 - [Two-way binding](/two-way-binding)
-
 - [Add Bootstrap 4](/add-bootstrap-4)
-
 - [Add routing](/routing)
